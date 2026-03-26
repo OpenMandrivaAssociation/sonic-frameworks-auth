@@ -7,7 +7,7 @@
 
 Name: sonic-frameworks-auth
 Version: 6.24.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 URL:     https://github.com/Sonic-DE/sonic-frameworks-auth
 # %if 0%{?git:1}
 # Source0: https://invent.kde.org/frameworks/kauth/-/archive/master/kauth-master.tar.bz2#/kauth-%{git}.tar.bz2
@@ -39,7 +39,11 @@ BuildRequires: cmake(Qt6ToolsTools)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: cmake(KF6CoreAddons)
-BuildRequires: cmake(KF6WindowSystem)
+
+# pending rename
+# BuildRequires: cmake(KF6WindowSystem)
+BuildRequires: %{_lib}SonicFrameworksWindowSystem-devel
+
 BuildRequires: polkit-qt6-1-devel
 Requires: %{libname} = %{EVRD}
 Conflicts:     kf6-kauth
