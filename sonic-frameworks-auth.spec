@@ -38,7 +38,10 @@ BuildRequires: doxygen
 BuildRequires: cmake(Qt6ToolsTools)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
-BuildRequires: cmake(KF6CoreAddons)
+
+# pending rename
+# BuildRequires: cmake(KF6CoreAddons)
+BuildRequires: %{_lib}SonicFrameworksCoreAddons-devel
 
 # pending rename
 # BuildRequires: cmake(KF6WindowSystem)
