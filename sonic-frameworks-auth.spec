@@ -6,13 +6,13 @@
 #define git 20240217
 
 Name: sonic-frameworks-auth
-Version: 6.24.0
-Release: %{?git:0.%{git}.}2
+Version: 6.25.0
+Release: %{?git:0.%{git}.}1
 URL:     https://github.com/Sonic-DE/sonic-frameworks-auth
 # %if 0%{?git:1}
 # Source0: https://invent.kde.org/frameworks/kauth/-/archive/master/kauth-master.tar.bz2#/kauth-%{git}.tar.bz2
 # %else
-Source0: %url/archive/refs/tags/%version.tar.gz#/%name-%version.tar.gz
+Source0: %url/archive/%version/%name-%version.tar.gz
 # %endif
 Summary: Execute actions as privileged user
 License: CC0-1.0 LGPL-2.0+ LGPL-2.1 LGPL-3.0
