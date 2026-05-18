@@ -76,6 +76,7 @@ Execute actions as privileged user
 
 %install -a
 %find_lang %{name} --all-name --with-qt --with-html
+rm -rf %{buildroot}/%{_libdir}/cmake
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kauth.*
@@ -86,7 +87,9 @@ Execute actions as privileged user
 %files -n %{devname}
 %{_includedir}/KF6/KAuth
 %{_includedir}/KF6/KAuthCore
-%{_libdir}/cmake/KF6Auth
+
+# pending rename
+# %{_libdir}/cmake/KF6Auth
 
 %files -n %{libname}
 %{_libdir}/libKF6AuthCore.so*
